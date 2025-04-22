@@ -8,7 +8,6 @@ import RegistrationForm from './RegistrationForm.jsx';
 import ReviewCard from './ReviewCard.jsx';
 import DentalFeatures from './DentalFeatures.jsx';
 import WorryFreeSection from './WorryFreeSection.jsx';
-import InsuranceInfo from './InsuranceInfo.jsx';
 import DoctorProfile from './DoctorProfile.jsx';
 import DentalFAQ from './DentalFAQ.jsx';
 
@@ -18,7 +17,6 @@ const HomePage = () => (
     <HeroSection />
     <RegistrationForm />
     <DoctorProfile />
-    <InsuranceInfo />
     <DentalFeatures />
     <WorryFreeSection />
     <ReviewCard />
