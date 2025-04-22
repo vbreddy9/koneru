@@ -1138,126 +1138,97 @@ video {
   padding: 2rem;
 }
 
-/* Why Choose Us Section */
-.why-choose-us {
-  background-color: #f7f9fc;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
+/* ===============================
+   Layout Containers
+   =============================== */
 
-.section-heading {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #1d3557;
-}
-
-.choose-us-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.choose-us-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #333;
-  font-size: 1rem;
-}
-
-.choose-us-icon {
-  color: #0077b6;
-  font-size: 1.25rem;
-}
-
-/* Call to Action Section */
-.doctor-cta {
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-}
-
-.cta-grid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.cta-slider {
-  flex: 1 1 50%;
-  display: flex;
-  overflow-x: auto;
-  gap: 10px;
-  padding: 1rem;
-  box-sizing: border-box;
-}
-
-.cta-slider img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  flex-shrink: 0;
-  width: calc(100% / 2.5);
-}
-
-.cta-box {
-  flex: 1 1 50%;
-  padding: 2rem;
-  background-color: #f1f1f1;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.cta-icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.cta-phone {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #2a9d8f;
-  margin: 1rem 0;
-}
-
-.cta-button {
-  display: inline-block;
-  background-color: #0077b6;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #023e8a;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+   .registration-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    gap: 2rem;
+  }
+  
+  /* ===============================
+     Left Section (Textual Reasons)
+     =============================== */
+  
+  .choose-us-section {
+    flex: 1 1 40%;
+  }
+  
+  .section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #df7204;
+    margin-bottom: 1.5rem;
+  }
+  
   .choose-us-list {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
     flex-direction: column;
+    gap: 1.25rem;
   }
-
-  .cta-slider img {
+  
+  .choose-us-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 1.05rem;
+    color: #333;
+  }
+  
+  .choose-us-icon {
+    color: #df7204;
+    font-size: 1.25rem;
+  }
+  
+  /* ===============================
+     Right Section (Image Slider)
+     =============================== */
+  
+  .why-right {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .slider-image {
     width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
   }
-
-  .cta-box {
-    padding: 1.5rem;
+  
+  /* ===============================
+     Responsive Adjustments
+     =============================== */
+  
+  @media (max-width: 992px) {
+    .registration-grid {
+      flex-direction: column;
+    }
+  
+    .choose-us-section,
+    .why-right {
+      flex: 1 1 100%;
+    }
+  
+    .why-right {
+      height: auto;
+      margin-top: 1.5rem;
+    }
   }
-}
+  
