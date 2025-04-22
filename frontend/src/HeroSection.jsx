@@ -24,7 +24,7 @@ const HeroSection = () => {
           <p className="hero-desc">Take the first step towards your best smile today.</p>
            <a
             href="https://book.modento.io/c/e3c519c43483402da1f510401a487e28/Koneru/patient-details"
-            className="cta-button"
+            className="cta-book"
             target="_blank"
             rel="noopener noreferrer"
           >
