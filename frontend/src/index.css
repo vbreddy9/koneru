@@ -1057,7 +1057,24 @@ video {
   background-color: #000000;
   transform: scale(1.05);
 }
+.cta-book {
+  text-decoration: none;
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
+.cta-book:hover {
+  background-color: #df7204;
+  transform: scale(1.05);
+}
+  
 /* Responsive Layout */
 @media (min-width: 768px) {
   .doctor-container {
