@@ -2,6 +2,7 @@ import { FaTooth, FaRegSmile, FaClinicMedical, FaUserMd, FaHandsHelping, FaPhone
 import slider1 from "./assets/slider1.jpg";
 import slider2 from "./assets/slider2.jpg";
 import slider3 from "./assets/slider3.jpg";
+import './WhyChooseUsWithCTA.css';
 
 const WhyChooseUsWithCTA = () => {
   const reasons = [
@@ -17,6 +18,7 @@ const WhyChooseUsWithCTA = () => {
 
   return (
     <div className="why-cta-wrapper">
+      {/* Why Choose Us Section */}
       <div className="why-choose-us">
         <h3 className="section-heading">Why Choose Us?</h3>
         <ul className="choose-us-list">
@@ -29,7 +31,7 @@ const WhyChooseUsWithCTA = () => {
         </ul>
       </div>
 
-      {/* CTA with Slider */}
+      {/* Call to Action Section */}
       <div className="doctor-cta">
         <div className="cta-grid">
           <div className="cta-slider">
@@ -40,13 +42,9 @@ const WhyChooseUsWithCTA = () => {
           <div className="cta-box">
             <div className="cta-icon">📅</div>
             <h3>WE CAN’T WAIT TO SEE YOU!</h3>
-            <p>
-              Looking for a dentist committed to your care? Reach out to us today and schedule a visit!
-            </p>
+            <p>Looking for a dentist committed to your care? Reach out to us today and schedule a visit!</p>
             <div className="cta-phone">📱 (919)-851-9690</div>
-            <a href="tel:+19198519690" className="cta-button">
-              REQUEST APPOINTMENT
-            </a>
+            <a href="tel:+19198519690" className="cta-button">REQUEST APPOINTMENT</a>
           </div>
         </div>
       </div>
