@@ -22,9 +22,13 @@ const HeroSection = () => {
             <span className="highlight-price">$119</span>
           </p>
           <p className="hero-desc">Take the first step towards your best smile today.</p>
-
-          <a href="tel:+19198519690">
-            <button className="call-btn">CALL TODAY!</button>
+           <a
+            href="https://book.modento.io/c/e3c519c43483402da1f510401a487e28/Koneru/patient-details"
+            className="cta-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+           BOOK APPOINTMENT
           </a>
         </div>
       </div>
