@@ -4,7 +4,6 @@ import Navbar from './Navbar';
 import HeroSection from './HeroSection';
 import Footer from './Footer';
 import ContactDetails from './ContactDetails';
-
 import WhyChooseUsWithCTA from './WhyChooseUsWithCTA.jsx';
 import ReviewCard from './ReviewCard.jsx';
 import DentalFeatures from './DentalFeatures.jsx';
@@ -16,7 +15,6 @@ const HomePage = () => (
   <>
     <Navbar />
     <HeroSection />
-    
     <WhyChooseUsWithCTA />
     <DoctorProfile />
     <DentalFeatures />
