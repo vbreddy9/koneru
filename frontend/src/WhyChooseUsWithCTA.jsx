@@ -1,7 +1,7 @@
 import { FaTooth, FaRegSmile, FaClinicMedical, FaUserMd, FaHandsHelping, FaPhoneAlt, FaCalendarCheck, FaClock } from "react-icons/fa";
-import slider1 from "./assets/slider1.jpg";
-import slider2 from "./assets/slider2.jpg";
-import slider3 from "./assets/slider3.jpg";
+import slider1 from "./assets/em-d.webp";
+import slider2 from "./assets/free-in.webp";
+import slider3 from "./assets/ns.webp";
 import './WhyChooseUsWithCTA.css';
 
 const WhyChooseUsWithCTA = () => {
