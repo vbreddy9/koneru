@@ -34,7 +34,7 @@ const DoctorProfile = () => {
             <p>
               Looking for a dentist committed to your care? Reach out to us today and schedule a visit!
             </p>
-            <div className="cta-phone">📱 (919)-851-9690</div>
+            <div className="cta-phone"><a href="tel:+19198519690" className="cta-button">📱 (919)-851-9690</a></div>
             <a
             href="https://book.modento.io/c/e3c519c43483402da1f510401a487e28/Koneru/patient-details"
             className="cta-button"
