@@ -11,7 +11,6 @@ import WorryFreeSection from './WorryFreeSection.jsx';
 import InsuranceInfo from './InsuranceInfo.jsx';
 import DoctorProfile from './DoctorProfile.jsx';
 import DentalFAQ from './DentalFAQ.jsx';
-import ThankYouPage from './ThankYou.jsx'; 
 
 const HomePage = () => (
   <>
@@ -33,7 +32,6 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/thankyou" element={<ThankYouPage />} />
     </Routes>
   );
 };
