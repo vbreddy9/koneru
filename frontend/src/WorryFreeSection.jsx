@@ -22,8 +22,8 @@ const WorryFreeSection = () => {
         <div className="column">
           <h3 className="column-title">Peaceful Scheduling</h3>
           <ul className="feature-list">
-            <li><FaCheck className="icon" /> Hours: 8:00 AM – 5:00 PM (Mon & Tue)</li>
-            <li><FaCheck className="icon" /> Hours: 8:00 AM – 5:00 PM (Fri & Sat)</li>
+            <li><FaCheck className="icon" /> Hours: 8:00 AM – 5:00 PM (Mon, Tue, Wed & Thu)</li>
+            <li><FaCheck className="icon" /> Hours: Office Hours Only (Fri)</li>
             <li><FaCheck className="icon" /> Everything under one roof!</li>
             <li><FaCheck className="icon" /> Same-day appointments & treatments.</li>
           </ul>
