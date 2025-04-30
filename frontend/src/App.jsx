@@ -1,11 +1,11 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './Navbar';
-import HeroSection from './HeroSection';
-import Footer from './Footer';
-import ContactDetails from './ContactDetails';
+import Navbar from './Navbar.jsx';
+import HeroSection from './HeroSection.jsx';
+import Footer from './Footer.jsx';
+import ContactDetails from './ContactDetails.jsx';
+import RegistrationForm from './RegistrationForm.jsx';
 
-import WhyChooseUsWithCTA from './WhyChooseUsWithCTA';
 import ReviewCard from './ReviewCard.jsx';
 import DentalFeatures from './DentalFeatures.jsx';
 import WorryFreeSection from './WorryFreeSection.jsx';
@@ -16,7 +16,8 @@ const HomePage = () => (
   <>
     <Navbar />
     <HeroSection />
-    <WhyChooseUsWithCTA />
+    <RegistrationForm/>
+    
     <DoctorProfile />
     <DentalFeatures />
     <WorryFreeSection />
