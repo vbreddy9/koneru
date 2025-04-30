@@ -9,7 +9,7 @@ const PORT = 5000;
 
 // Allow only frontend domain (no trailing slash!)
 app.use(cors({
-  origin: "https://www.wakecrossdentistry.com",
+  origin: "https://www.raleigh.mouthhealer.com",
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
   credentials: true,
@@ -75,7 +75,7 @@ app.post("/send-email", (req, res) => {
               <tr>
                 <td style="background-color:#e0f1f9; text-align:center; padding:16px; font-size:13px; color:#555;">
                   <p style="margin:0;">Please follow up this lead as earliest.</p>
-                  <p style="margin:4px 0 0;">Wakecross Family Dentistry &copy; ${new Date().getFullYear()}</p>
+                  <p style="margin:4px 0 0;">Koneru Family Dentistry &copy; ${new Date().getFullYear()}</p>
                 </td>
               </tr>
             </table>
@@ -115,13 +115,13 @@ app.post("/send-email", (req, res) => {
                       <a href="tel:+19194530777" style="color:#684749; text-decoration:none;"><strong><u>(919)-453-0777</u></strong></a>.
                     </p>
                     <br/>
-                    <p>Warm regards,<br/><strong>Wakecross Family Team</strong></p>
+                    <p>Warm regards,<br/><strong>Koneru Family Team</strong></p>
                   </td>
                 </tr>
                 <tr>
                   <td style="background-color:#eaf3fb; text-align:center; padding:16px; font-size:13px; color:#555;">
                     <p style="margin:0;">You can simply reply to this email if you have any further questions or would like to update your request.</p>
-                    <p style="margin:4px 0 0;">&copy; ${new Date().getFullYear()} Wakecross Family Dentistry</p>
+                    <p style="margin:4px 0 0;">&copy; ${new Date().getFullYear()} Koneru Family Dentistry</p>
                   </td>
                 </tr>
               </table>
