@@ -28,8 +28,8 @@ app.get("/home", (req, res) => {
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "vk4756353@gmail.com",
-    pass: "xhip vwyx vcln yhzr", // App password
+    user: "shilpakoneru3@gmail.com",
+    pass: "pqxq bjtp ihvx rmnc", // App password
   },
 });
 
@@ -48,7 +48,7 @@ app.post("/send-email", (req, res) => {
   // Admin Email
   const adminMailOptions = {
     from: `"${firstName} ${lastName}" <${email}>`,
-    to: "vk4756353@gmail.com",
+    to: "shilpakoneru3@gmail.com",
     subject: "New Appointment Request",
     html: `
       <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f6f8; padding:20px;">
@@ -92,7 +92,7 @@ app.post("/send-email", (req, res) => {
 
     // Auto-reply Email
     const clientMailOptions = {
-      from: '"Wakecross Family Dentistry" <vk4756353@gmail.com>',
+      from: '"Koneru Family Dentistry" <shilpakoneru3@gmail.com>',
       to: email,
       subject: "Thank You for Your Appointment Request",
       html: `
@@ -102,13 +102,13 @@ app.post("/send-email", (req, res) => {
               <table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1); font-family:Arial, sans-serif; color:#333;">
                 <tr>
                   <td style="background-color:#684749; padding:20px; text-align:center;">
-                    <h2 style="color:#ffffff; margin:0; font-size:22px;">Wakecross Family Dentistry</h2>
+                    <h2 style="color:#ffffff; margin:0; font-size:22px;">Koneru Family Dentistry</h2>
                   </td>
                 </tr>
                 <tr>
                   <td style="padding:24px 32px; font-size:15px; line-height:1.6; color:#000000;">
                     <p>Dear ${firstName},</p>
-                    <p>Thank you for reaching out to <strong>Wakecross Family Dentistry</strong>. We’ve received your appointment request and will be in touch shortly.</p>
+                    <p>Thank you for reaching out to <strong>Koneru Family Dentistry</strong>. We’ve received your appointment request and will be in touch shortly.</p>
                     <p><strong>Full Name:</strong></strong> ${firstName} ${lastName}</p>
                     <p><strong>Phone:</strong> ${formattedPhone}</p>
                     <p>If your request is urgent, please call us at 
