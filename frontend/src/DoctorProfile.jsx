@@ -23,10 +23,12 @@ const DoctorProfile = () => {
           <p>
             Committed to lifelong learning, Dr. Shilpa Koneru actively pursues continuing education courses to expand her expertise in various dental procedures. She believes in staying at the forefront of advancements in dentistry to provide patients with the best possible care.
           </p>
-           <p>
-           For her, dentistry is more than a profession – it is a true passion. She looks forward to meeting each patient and helping them achieve their dental health goals.
+          <p>
+            For her, dentistry is more than a profession – it is a true passion. She looks forward to meeting each patient and helping them achieve their dental health goals.
           </p>
         </div>
+
+        {/* This section was misplaced — now fixed */}
         <div className="doctor-cta">
           <div className="cta-box">
             <div className="cta-icon">📅</div>
@@ -34,13 +36,13 @@ const DoctorProfile = () => {
             <p>
               Looking for a dentist committed to your care? Reach out to us today and schedule a visit!
             </p>
-             <div className="cta-phone">📱 (919)-851-9690</div>
-              <a href="tel:+19198519690" className="cta-button">
+            <div className="cta-phone">📱 (919)-851-9690</div>
+            <a href="tel:+19198519690" className="cta-button">
               REQUEST APPOINTMENT
             </a>
           </div>
-          </div>
         </div>
+
       </div>
     </section>
   );
