@@ -32,10 +32,10 @@ const HeroSection = () => {
                 BOOK APPOINTMENT
               </a>
               */}
-
-          <a href="tel:+19198519690" className="phone-link">
-          <FaPhoneAlt /> BOOK APPOINTMENT
-        </a>
+            <a href="tel:+19198519690">
+            <button className="call-btn">BOOK APPOINTMENT!</button>
+          </a>
+         
         </div>
       </div>
     </section>
