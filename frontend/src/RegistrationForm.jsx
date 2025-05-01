@@ -49,7 +49,7 @@ const RegistrationForm = () => {
 
     setLoading(true); // Start loading
     try {
-      await axios.post("https://api.wakecrossdentistry.com/send-email", formData);
+      await axios.post("https://koneru-backend.vercel.app/send-email", formData);
             // ✅ Push success event to GTM
           window.dataLayer = window.dataLayer || [];
           window.dataLayer.push({
