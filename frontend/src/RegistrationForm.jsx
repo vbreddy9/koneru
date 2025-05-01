@@ -49,12 +49,12 @@ const RegistrationForm = () => {
 
     setLoading(true); // Start loading
     try {
-      await axios.post("https://koneru-backend.vercel.app/send-email", formData);
+      await axios.post("https://server.mouthhealer.com/send-email", formData);
             // ✅ Push success event to GTM
           window.dataLayer = window.dataLayer || [];
           window.dataLayer.push({
-            event: "form_submission_success",
-            formName: "Schedule Form", // Optional, helps identify form in GTM
+            event: "lead_submission_success",
+            formName: "book appointment", // Optional, helps identify form in GTM
           });
       alert("Form Submitted Successfully!");
       setFormData({
