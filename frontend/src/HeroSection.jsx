@@ -6,8 +6,7 @@ const HeroSection = () => {
   return (
     <section
       className="hero-section"
-      style={{ backgroundImage: `url(${logo})` }}
-    >
+      style={{ backgroundImage: `url(${logo})` }}>
       {/* Overlay */}
       <div className="overlay"></div>
 
@@ -22,17 +21,7 @@ const HeroSection = () => {
             <span className="highlight-price">$119</span>
           </p>
           <p className="hero-desc">Take the first step towards your best smile today.</p>
-           {/*
-              <a
-                href="https://book.modento.io/c/e3c519c43483402da1f510401a487e28/Koneru/patient-details"
-                className="cta-book"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                BOOK APPOINTMENT
-              </a>
-              */}
-            <a href="tel:+19198519690">
+           <a href="tel:+19198519690">
             <button className="call-btn">BOOK APPOINTMENT!</button>
           </a>
          
