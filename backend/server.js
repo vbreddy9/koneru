@@ -126,7 +126,7 @@ app.post("/send-email", (req, res) => {
                     <p><strong>Full Name:</strong></strong> ${firstName} ${lastName}</p>
                     <p><strong>Phone:</strong> ${formattedPhone}</p>
                     <p>If your request is urgent, please call us at 
-                      <a href="tel:+19194530777" style="color:#684749; text-decoration:none;"><strong><u>(919)-453-0777</u></strong></a>.
+                      <a href="tel:+19198519690" style="color:#684749; text-decoration:none;"><strong><u>(919)-851-9690</u></strong></a>.
                     </p>
                     <br/>
                     <p>Warm regards,<br/><strong>Koneru Family Team</strong></p>
