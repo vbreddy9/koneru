@@ -12,7 +12,8 @@ app.use(cors({
   origin: [
     "https://www.raleigh.mouthhealer.com",
     "https://mouthhealer.com",
-    "https://www.mouthhealer.com"
+    "https://www.mouthhealer.com",
+    "https://server.mouthhealer.com" 
   ],
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
