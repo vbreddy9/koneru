@@ -9,11 +9,16 @@ const PORT = 5000;
 
 // Allow only frontend domain (no trailing slash!)
 app.use(cors({
-  origin: "https://www.raleigh.mouthhealer.com",
+  origin: [
+    "https://www.raleigh.mouthhealer.com",
+    "https://mouthhealer.com",
+    "https://www.mouthhealer.com"
+  ],
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
   credentials: true,
 }));
+
 
 app.use(bodyParser.json());
 app.use(requestIp.mw());
