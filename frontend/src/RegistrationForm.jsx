@@ -103,6 +103,7 @@ const RegistrationForm = () => {
         </div>
 
         {/* Right Section */}
+        <div class="outer-wrapper">
         <div className="form-wrapper">
           <div className="registration-form-card">
             <h2 className="form-title">BOOK APPOINTMENT</h2>
@@ -155,7 +156,7 @@ const RegistrationForm = () => {
             </form>
           </div>
         </div>
-
+       </div>
       </div>
     </div>
   );
