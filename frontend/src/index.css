@@ -1402,7 +1402,7 @@ video {
 
 @media (max-width: 768px) {
   .outer-wrapper {
-    display: none !important;
+     background: none; /* removes background */
   }
 
   .form-wrapper {
