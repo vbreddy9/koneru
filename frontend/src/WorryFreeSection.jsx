@@ -33,6 +33,7 @@ const WorryFreeSection = () => {
           <ul className="feature-list">
             <li><FaCheck className="icon" /> No insurance? We offer flexible plans.</li>
             <li><FaCheck className="icon" /> Affordable financing options available.</li>
+            <li><FaCheck className="icon" /> No Medicaid Patients*.</li>
           </ul>
         </div>
       </div>
