@@ -9,10 +9,10 @@ const PORT = 5000;
 
 // Allow only frontend domain (no trailing slash!)
 const allowedOrigins = [
-  "https://raleigh.mouthhealer.com",
-  "https://www.raleigh.mouthhealer.com",
-  "https://mouthhealer.com",
-  "https://www.mouthhealer.com",
+  "https://server.konerudentistry.com",
+  "https://www.server.konerudentistry.com",
+  "https://konerudentistry.com",
+  "https://www.konerudentistry.com",
 ];
 
 app.use(cors({
