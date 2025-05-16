@@ -49,11 +49,11 @@ const RegistrationForm = () => {
 
     setLoading(true); // Start loading
     try {
-      await axios.post("https://server.mouthhealer.com/send-email", formData);
+      await axios.post("https://server.konerudentistry.com/send-email", formData);
             // ✅ Push success event to GTM
           window.dataLayer = window.dataLayer || [];
           window.dataLayer.push({
-            event: "lead_submission_success",
+            event: "submission_success",
             formName: "book appointment", // Optional, helps identify form in GTM
           });
       alert("Form Submitted Successfully!");
