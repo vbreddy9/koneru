@@ -11,12 +11,12 @@ const RegistrationForm = () => {
     lastName: "",
     email: "",
     phoneNumber: "",
-    dob: "",
+    appointmentDate: "",
     referralSource: "",
   });
 
   const [errors, setErrors] = useState({});
-  const [loading, setLoading] = useState(false); // <-- Added loading state
+  const [loading, setLoading] = useState(false);
 
   const validate = () => {
     const newErrors = {};
@@ -32,7 +32,7 @@ const RegistrationForm = () => {
     } else if (!/^\d{7,15}$/.test(formData.phoneNumber)) {
       newErrors.phoneNumber = "Invalid phone number (7-15 digits)";
     }
-    if (!formData.dob) newErrors.dob = "Date of Birth is required";
+    if (!formData.appointmentDate) newErrors.appointmentDate = "Date of Appointment is required";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -47,29 +47,31 @@ const RegistrationForm = () => {
     e.preventDefault();
     if (!validate()) return;
 
-    setLoading(true); // Start loading
+    setLoading(true);
     try {
       await axios.post("https://server.konerudentistry.com/send-email", formData);
-            // ✅ Push success event to GTM
-          window.dataLayer = window.dataLayer || [];
-          window.dataLayer.push({
-            event: "submission_success",
-            formName: "book appointment", // Optional, helps identify form in GTM
-          });
+
+      // ✅ Push success event to GTM
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "submission_success",
+        formName: "book appointment",
+      });
+
       alert("Form Submitted Successfully!");
       setFormData({
         firstName: "",
         lastName: "",
         email: "",
         phoneNumber: "",
-        dob: "",
+        appointmentDate: "",
         referralSource: "",
       });
     } catch (err) {
       console.error("Submission Error", err);
       alert("Submission Failed. Please try again later.");
     } finally {
-      setLoading(false); // End loading
+      setLoading(false);
     }
   };
 
@@ -79,10 +81,7 @@ const RegistrationForm = () => {
 
         {/* Left Section */}
         <div className="choose-us-section">
-          <h3 className="section-heading">
-            Why Choose Us?
-            
-          </h3>
+          <h3 className="section-heading">Why Choose Us?</h3>
           <ul className="choose-us-list">
             {[
               { icon: FaTooth, text: "Comprehensive dental check-ups & cleanings" },
@@ -103,60 +102,67 @@ const RegistrationForm = () => {
         </div>
 
         {/* Right Section */}
-        <div class="outer-wrapper">
-        <div className="form-wrapper">
-          <div className="registration-form-card">
-            <h2 className="form-title">BOOK APPOINTMENT</h2>
-            
-            <form onSubmit={handleSubmit} className="registration-form">
-              {["firstName", "lastName", "email", "phoneNumber", "dob"].map((name) => (
-                <div key={name} className="form-group">
-                  <label className="form-label">
-                    {name.replace(/([A-Z])/g, " $1")}
-                  </label>
-                  <input
-                    type={name === "dob" ? "date" : name === "email" ? "email" : "text"}
-                    name={name}
-                    value={formData[name]}
+        <div className="outer-wrapper">
+          <div className="form-wrapper">
+            <div className="registration-form-card">
+              <h2 className="form-title">BOOK APPOINTMENT</h2>
+
+              <form onSubmit={handleSubmit} className="registration-form">
+                {["firstName", "lastName", "email", "phoneNumber", "appointmentDate"].map((name) => (
+                  <div key={name} className="form-group">
+                    <label className="form-label">
+                      {name === "appointmentDate"
+                        ? "Date of Appointment"
+                        : name.replace(/([A-Z])/g, " $1")}
+                    </label>
+                    <input
+                      type={name === "appointmentDate" ? "date" : name === "email" ? "email" : "text"}
+                      name={name}
+                      value={formData[name]}
+                      onChange={handleChange}
+                      placeholder={
+                        name === "firstName"
+                          ? "Enter first name"
+                          : name === "lastName"
+                          ? "Enter last name"
+                          : name === "email"
+                          ? "Enter your e-mail"
+                          : name === "phoneNumber"
+                          ? "+1 (XXX) XXX-XXXX"
+                          : ""
+                      }
+                      className="form-input"
+                    />
+                    {errors[name] && (
+                      <p className="form-error">{errors[name]}</p>
+                    )}
+                  </div>
+                ))}
+
+                <div className="form-group">
+                  <label className="form-label">How Did You Hear About Us?</label>
+                  <select
+                    name="referralSource"
+                    value={formData.referralSource}
                     onChange={handleChange}
-                    placeholder={
-                      name === "firstName" ? "Enter first name" :
-                      name === "lastName" ? "Enter last name" :
-                      name === "email" ? "Enter your e-mail" :
-                      name === "phoneNumber" ? "+1 (XXX) XXX-XXXX" :
-                      ""
-                    }
                     className="form-input"
-                  />
-                  {errors[name] && (
-                    <p className="form-error">{errors[name]}</p>
-                  )}
+                  >
+                    <option value="">Select an option</option>
+                    <option value="Google">Google</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Friend">Friend</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
-              ))}
 
-              <div className="form-group">
-                <label className="form-label">How Did You Hear About Us?</label>
-                <select
-                  name="referralSource"
-                  value={formData.referralSource}
-                  onChange={handleChange}
-                  className="form-input"
-                >
-                  <option value="">Select an option</option>
-                  <option value="Google">Google</option>
-                  <option value="Social Media">Social Media</option>
-                  <option value="Friend">Friend</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-
-              <button type="submit" className="submit-btn" disabled={loading}>
-                {loading ? "Submitting..." : "Submit"}
-              </button>
-            </form>
+                <button type="submit" className="submit-btn" disabled={loading}>
+                  {loading ? "Submitting..." : "Submit"}
+                </button>
+              </form>
+            </div>
           </div>
         </div>
-       </div>
+
       </div>
     </div>
   );
